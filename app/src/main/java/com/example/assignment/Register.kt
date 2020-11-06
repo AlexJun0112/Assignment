@@ -22,12 +22,12 @@ class Register : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
     private lateinit var progressBar: ProgressBar
 
-    public override fun onStart() {
-        super.onStart()
-        // Check if user is signed in (non-null) and update UI accordingly.
-        val currentUser = auth.currentUser
-
-    }
+//    public override fun onStart() {
+//        super.onStart()
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        val currentUser = auth.currentUser
+//
+//    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_register)
@@ -43,12 +43,7 @@ class Register : AppCompatActivity() {
         auth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar)
 
-        if(auth.currentUser != null){
-            MainActivity()
-        }
-
-
-        registerBtn.setOnClickListener {
+            registerBtn.setOnClickListener {
             val username = username1.text.toString()
             val email = email1.text.toString()
             val password = password1.text.toString()
