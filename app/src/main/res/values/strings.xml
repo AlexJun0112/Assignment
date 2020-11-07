@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Assignment</string>
+    <string name="app_name">CargoLite</string>
     <string name="warehouseLogo">warehouseLogo</string>
     <string name="Username">username</string>
     <string name="Password">password</string>
