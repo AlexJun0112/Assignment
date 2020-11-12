@@ -9,4 +9,6 @@
     <string name="email">email</string>
     <string name="phoneNumber">phone number</string>
     <string name="logo">Logo</string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
 </resources>

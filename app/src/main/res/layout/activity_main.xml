@@ -1,18 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <ImageButton
+            android:id="@+id/imageButtonProduct2"
+            android:layout_width="340dp"
+            android:layout_height="143dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.585"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonProduct1"
+            app:srcCompat="@drawable/bed" />
+
+        <ImageButton
+            android:id="@+id/imageButtonProduct3"
+            android:layout_width="160dp"
+            android:layout_height="197dp"
+            android:layout_marginTop="20dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintEnd_toStartOf="@+id/imageButtonProduct4"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonProduct2"
+            app:srcCompat="@drawable/lounge_chair" />
+
+        <ImageButton
+            android:id="@+id/imageButtonProduct4"
+            android:layout_width="158dp"
+            android:layout_height="191dp"
+            android:layout_marginTop="16dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toBottomOf="@+id/imageButtonProduct3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageButtonProduct3"
+            app:layout_constraintTop_toBottomOf="@+id/imageButtonProduct2"
+            app:layout_constraintVertical_bias="0.3"
+            app:srcCompat="@drawable/living" />
+
+        <ImageButton
+            android:id="@+id/imageButtonProduct1"
+            android:layout_width="349dp"
+            android:layout_height="155dp"
+            android:layout_marginTop="50dp"
+            android:scaleType="fitCenter"
+            app:layout_constraintBottom_toTopOf="@+id/imageButtonProduct2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.636"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/casegood" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navView"
+        app:headerLayout="@layout/nav_header"
+        app:menu="@menu/nav_drawer_menu"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true">
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
